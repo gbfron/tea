@@ -22,22 +22,24 @@ public class TEA_P3_Wormhole_Formation : SplatoonScript
 
     private readonly Dictionary<int, Vector2[]> _baitPositions = new()
     {
-        { 1, [new Vector2(100, 88f), new Vector2(100f, 88f), new Vector2(81f, 99f), new Vector2(90f, 97f)] },
-        { 2, [new Vector2(113.5f, 86f), new Vector2(113.5f, 86f), new Vector2(119f, 99f), new Vector2(110f, 103f)] },
-        { 3, [new Vector2(87, 113), new Vector2(87f, 113f), new Vector2(81f, 101f), new Vector2(81f, 101f)] },
-        { 4, [new Vector2(113, 113), new Vector2(113f, 113f), new Vector2(119f, 101f), new Vector2(119f, 101f)] },
-        { 5, [new Vector2(84.45f, 89.65f), new Vector2(82f, 96f), new Vector2(86.5f, 86f), new Vector2(81f, 99f)] },
-        { 6, [new Vector2(115.55f, 89.65f), new Vector2(118, 104f), new Vector2(113.5f, 86f), new Vector2(119f, 99f)] },
-        { 7, [new Vector2(83, 93), new Vector2(81.5f, 100f), new Vector2(85f, 93f), new Vector2(86.5f, 114f)] },
-        { 8, [new Vector2(92.7, 100), new Vector2(81.8f, 100f), new Vector2(85.9f, 100f), new Vector2(87.1f, 87.1f)] }
+        // { 1, [new Vector2(100f, 89f), new Vector2(81.5f, 100f), new Vector2(81.5f, 100f), new Vector2(89.1f, 102.9f)] },
+        // { 2, [new Vector2(107f, 117.3f), new Vector2(118.1f, 100f), new Vector2(118.1f, 100f), new Vector2(111f, 97.70f)] },
+        { 1, [new Vector2(100f, 89f) ] },
+        { 2, [new Vector2(100f, 117.3f), new Vector2(100f, 117.3f)] },
+        { 3, [new Vector2(106, 99), new Vector2(113f, 87f), new Vector2(119f, 101f), new Vector2(119f, 101f)] },
+        { 4, [new Vector2(93, 99), new Vector2(87f, 87f), new Vector2(81f, 101f), new Vector2(81f, 101f)] },
+        { 5, [new Vector2(106, 102), new Vector2(117, 100), new Vector2(113.5f, 86f), new Vector2(119f, 99f)] },
+        { 6, [new Vector2(93, 102), new Vector2(82.6f, 100), new Vector2(86.5f, 86f), new Vector2(81f, 99f)] },
+        { 7, [new Vector2(106, 100), new Vector2(118.1f, 100f), new Vector2(115f, 98f), new Vector2(113f, 87f)] },
+        { 8, [new Vector2(93, 100), new Vector2(81.5f, 100f), new Vector2(84.5f, 101f), new Vector2(87f, 87f)] },
+        { 9, [new Vector2(100f, 89f), new Vector2(118.1f, 100f), new Vector2(81f, 99f), new Vector2(90f, 97f)] },
+        { 10, [new Vector2(92.8f, 117.3f), new Vector2(81.5f, 100f), new Vector2(81.5f, 100f), new Vector2(89.1f, 102.9f)] }
     };
 
     private readonly List<List<int>> _invertApplyIndex =
     [
-        [],
-        [5, 6],
-        [7, 8],
-        [1, 2]
+        [1, 9],
+        [2, 10]
     ];
 
     private TickScheduler? _chakramScheduler;
